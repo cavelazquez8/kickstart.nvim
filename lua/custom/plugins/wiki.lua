@@ -10,7 +10,7 @@ return {
   init = function()
     vim.g.vimwiki_list = {
       {
-        path = '~/cavelazquez8-wiki/',
+        path = '/data/data/com.termux/files/home/storage/downloads/cavelazquez8-wiki/',
         syntax = 'markdown',
         ext = '.md',
         -- Custom Markdown to HTML converter
