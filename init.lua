@@ -787,6 +787,10 @@ do
     gh 'WhoIsSethDaniel/mason-tool-installer.nvim',
   }
 
+  local system_servers = {
+      -- clangd = {},
+  }
+
   -- Automatically install LSPs and related tools to stdpath for Neovim
   require('mason').setup {}
 
@@ -812,6 +816,11 @@ do
   for name, server in pairs(servers) do
     vim.lsp.config(name, server)
     vim.lsp.enable(name)
+  end
+
+  for name, server in pairs(system_servers) do
+      vim.lsp.config(name, server)
+      vim.lsp.enable(name)
   end
 end
 
