@@ -788,7 +788,14 @@ do
   }
 
   local system_servers = {
-      -- clangd = {},
+    -- clangd = {
+    -- cmd = {
+    -- Wonderful Toolchain / Butano / GBA
+    -- Uncomment when working on a Butano project.
+    -- 'clangd',
+    -- '--query-driver=/opt/wonderful/toolchain/gcc-arm-none-eabi/bin/arm-none-eabi-*',
+    -- },
+    -- },
   }
 
   -- Automatically install LSPs and related tools to stdpath for Neovim
@@ -819,8 +826,8 @@ do
   end
 
   for name, server in pairs(system_servers) do
-      vim.lsp.config(name, server)
-      vim.lsp.enable(name)
+    vim.lsp.config(name, server)
+    vim.lsp.enable(name)
   end
 end
 
